@@ -13,9 +13,11 @@ typedef struct{
 
 sudoku* newSudoku();
 
-void placeDigit(sudoku* s, int digit, int x, int y);
+void placeDigit(sudoku* s, int digit, int square, int tile);
 
-bool compareDigitToSolution(sudoku* s, int x, int y);
+void placeHint(sudoku* s, int hint, int square, int tile);
+
+bool compareDigitToSolution(sudoku* s, int square, int tile);
 
 void printSudoku(sudoku s);
 
