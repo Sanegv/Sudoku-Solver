@@ -1,9 +1,13 @@
-#include "sudoku.h"
+#include "solver.h"
 
 int main(){
     sudoku *s = newSudoku();
 
-    printSudoku(*s);
+    addAllHints(s);
+    if(!solve(s, 0, 0))
+        printf("No solution exists.\n");
+    else
+        printSudoku(*s);
 
     freeSudoku(s);
     return 0;

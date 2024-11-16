@@ -7,7 +7,6 @@
 
 typedef struct{
     int **grid;
-    int **solution;
     bool **mask;
 } sudoku;
 
@@ -20,6 +19,8 @@ void placeHint(sudoku* s, int hint, int square, int tile);
 bool compareDigitToSolution(sudoku* s, int square, int tile);
 
 void printSudoku(sudoku s);
+
+bool sudokuFull(sudoku *s);
 
 void freeSudoku(sudoku* s);
 

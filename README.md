@@ -1,5 +1,22 @@
 # Sudoku solver
 
+## How to use
+
+This solver does not have any GUI, so you'll have to use the terminal to use it.
+It might not be extremely user-friendly, but it is not hard to use:
+
+First, the program will ask how many hints are present in our grid. It then expects you to write down *only* the number of hints, which must be between 0 and 81.
+
+Then, you will be asked, for each hint, in which square it is located (a square being the 3*3 subdivision of the grid). It expects a number between 0 and 8, 0 being the top left corner, 8 being the bottom right corner, with 4 being the central square, 2 the top right one, and 6 the bottom left one. See the image below.
+
+Once the square is entered, you will be prompted with entering the tile of the hint. Once again, a number between 0 and 8 is expected, and the coordinates are the same as for the square.
+Finally, you will be prompted with entering the value of the hint, ranging from 1 to 9.
+
+[![Grid coordinates](./Coordinates.png "Grid coordinates")](./Coordinates.png "Grid coordinates")
+
+Once you have entered all of this, the program will print the current state of the grid, to help you remember which hints you have already entered, and it will repeat the last three steps until all the hints are written in.
+Then, it will compute a solution (not necessarily unique) if one exists, and print it to you.
+
 ## Goal
 
 The goal of this program is to solve any given sudoku grid, if a solution exists.
@@ -21,7 +38,7 @@ This kind of algorithm is used to solve problems like exploring a labyrinth,find
 While not a brand-new concept, I wanted to force myself to do this project properly, and TDD (Test Driven Development) allowed me to gain a lot of time when trying an implementation.
 C unit testing is not as advanced as Java's JUnit or Go's Testing, but it is more than enough to create a working TDD environment.
 
-## SUdoku
+## Sudoku
 
 A sudoku is a well known puzzle, in which we are given a 9*9 grid with a few digits already placed in it.
 
